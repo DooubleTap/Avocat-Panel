@@ -3,7 +3,7 @@
 session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if(!isset($_SESSION["loggedinavocat"]) || $_SESSION["loggedinavocat"] !== true){
     header("location: login.php");
     exit;
 }
@@ -52,7 +52,7 @@ require_once "include/config.php";
 												</h3>
                     <form name="myform" action="afficherinfo.php" method="GET">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="id"  placeholder="Prénom, nom de famille, plaque de véhicule ou numéro de téléphone" required>
+                            <input type="text" class="form-control" name="id"  placeholder="Prénom, nom de famille" required>
                             <div class="input-group-append">
                                 <span onclick="myform.submit()" class="input-group-text">
                                     <i class="fa fa-fw fa-search"></i>
